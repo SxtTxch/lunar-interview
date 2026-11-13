@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
             engine_status = false;
         }
 
-        printf("H: %.1fm, V=%.1fm/s, %s\n", current_height, current_velocity, engine_status ? "ON" : "OFF");
+        printf("H=%.1fm, V=%.1fm/s, %s\n", current_height, current_velocity, engine_status ? "ON" : "OFF");
         fprintf(fpt, "%.1f,%.1f,%.1f,%d\n", current_time, current_height, current_velocity, engine_status ? 1 : 0);
 
         if (engine_status) {
