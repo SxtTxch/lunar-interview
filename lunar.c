@@ -51,6 +51,7 @@ int main(int argc, char *argv[]) {
 
     current_height = current_height > 0 ? current_height : 0;
     printf("H: %.1fm, V=%.15fm/s, %s\n", current_height, current_velocity, engine_status ? "ON" : "OFF");
+    fprintf(fpt, "%.1f,%.1f,%.15f,%d\n", current_time, current_height, current_velocity, engine_status ? 1 : 0);
     // dla danych wyjsciowych zatrzymuje sie na jakies predkosci absurdalnie blisko 1 wiec zeby zobaczyc ze jest to faktycznie ponizej 1 uzylem .15f (tylko 15 miejsc ma znaczenie dla double) lol
     printf(current_velocity >= 1 ? "Crashed...\n" : "Survived!\n");
 
